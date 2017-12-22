@@ -203,6 +203,7 @@ nav {
                 display: block;
                 text-align: center;
                 margin: 2px 0;
+                position: relative;
 
                 @media (min-width: 992px) {
                     display: inline-block;
@@ -218,6 +219,25 @@ nav {
 
                 &.active {
                     background: rgba($white, 0.3);
+                    @media (min-width: 992px) {
+                        position: relative;
+                        top: 7px;
+                    }
+                    &:before {
+                        @media (min-width: 992px) {
+                            width: 16px;
+                            content: " ";
+                            background-image: url(../img/gic.png);
+                            position: absolute;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            top: -10px;
+                            z-index: 999;
+                            height: 100%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
 
                     &:hover {
                         background: rgba($white, 0.3);

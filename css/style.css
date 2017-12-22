@@ -146,7 +146,8 @@ nav {
     nav .main-navbar ul li, nav .main-navbar ul a {
       display: block;
       text-align: center;
-      margin: 2px 0; }
+      margin: 2px 0;
+      position: relative; }
       @media (min-width: 992px) {
         nav .main-navbar ul li, nav .main-navbar ul a {
           display: inline-block;
@@ -159,6 +160,23 @@ nav {
       font-family: 'Proxima Nova Light'; }
       nav .main-navbar ul a.active {
         background: rgba(255, 255, 255, 0.3); }
+        @media (min-width: 992px) {
+          nav .main-navbar ul a.active {
+            position: relative;
+            top: 7px; } }
+        @media (min-width: 992px) {
+          nav .main-navbar ul a.active:before {
+            width: 16px;
+            content: " ";
+            background-image: url(../img/gic.png);
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: contain;
+            top: -10px;
+            z-index: 999;
+            height: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%); } }
         nav .main-navbar ul a.active:hover {
           background: rgba(255, 255, 255, 0.3); }
       @media (min-width: 992px) {
