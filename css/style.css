@@ -49,7 +49,8 @@ nav {
   padding: 10px 20px;
   background: transparent;
   font-size: 0;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  overflow: hidden; }
   @media (max-width: 991px) {
     nav {
       display: flex;
@@ -158,27 +159,25 @@ nav {
       background: rgba(255, 255, 255, 0.02);
       font-size: 18px;
       font-family: 'Proxima Nova Light'; }
-      nav .main-navbar ul a.active {
+      @media (min-width: 992px) {
+        nav .main-navbar ul a.active {
+          position: relative;
+          top: 7px; } }
+      @media (min-width: 992px) {
+        nav .main-navbar ul a.active:before {
+          width: 16px;
+          content: " ";
+          background-image: url(../img/gic.png);
+          position: absolute;
+          background-repeat: no-repeat;
+          background-size: contain;
+          top: -10px;
+          z-index: 999;
+          height: 100%;
+          left: 50%;
+          transform: translate(-50%, -50%); } }
+      nav .main-navbar ul a.active:hover {
         background: rgba(255, 255, 255, 0.3); }
-        @media (min-width: 992px) {
-          nav .main-navbar ul a.active {
-            position: relative;
-            top: 7px; } }
-        @media (min-width: 992px) {
-          nav .main-navbar ul a.active:before {
-            width: 16px;
-            content: " ";
-            background-image: url(../img/gic.png);
-            position: absolute;
-            background-repeat: no-repeat;
-            background-size: contain;
-            top: -10px;
-            z-index: 999;
-            height: 100%;
-            left: 50%;
-            transform: translate(-50%, -50%); } }
-        nav .main-navbar ul a.active:hover {
-          background: rgba(255, 255, 255, 0.3); }
       @media (min-width: 992px) {
         nav .main-navbar ul a {
           font-size: 12px;

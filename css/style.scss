@@ -81,6 +81,7 @@ nav {
     background: transparent;
     font-size: 0;
     transition: all 0.5s;
+    overflow: hidden;
 
     @media (max-width: 991px) {
         display: flex;
@@ -218,7 +219,6 @@ nav {
                 font-family: 'Proxima Nova Light';
 
                 &.active {
-                    background: rgba($white, 0.3);
                     @media (min-width: 992px) {
                         position: relative;
                         top: 7px;
